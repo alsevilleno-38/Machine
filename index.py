@@ -1,14 +1,17 @@
-class Student:
-    def __init__(self, name):
-        self.name = name
+from tkinter import *
+from tkinter import messagebox
 
-class PhD(Student):
-    def __init__(self, name, field):
-        super().__init__(name)
-        self.field = field
-    
-p1 = PhD("Doe", "Math")
-print(p1.name)
-print(p1.field)
+root = Tk()
+e = Entry(root, width=50)
+e.insert(0, "Tkinter")
+e.grid(row=1, column=1)
+
+def screen():
+    messagebox.showinfo("Information", "Please close this")
+
+btn1 = Button(root, text="Click me", command=screen).grid(row=0, column=1)
+
+root.mainloop()
+
 
 
