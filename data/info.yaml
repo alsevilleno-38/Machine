@@ -1,0 +1,11 @@
+students:
+  - name: "Pam"
+    age: 300
+
+  - name: "Lam"
+    age: 1000
+    activies:
+      - "Eating"
+      - "Sleeping"
+      
+  - name: "Default"

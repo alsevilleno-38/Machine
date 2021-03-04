@@ -1,9 +1,18 @@
-import re
+class Student:
+    def __init__(self, name, gender):
+        self.__name = name
+        self.__gender = gender
+    @property
+    def name(self):
+        return self.__name
+    @name.setter
+    def name(self, name):
+        self.__name = name
+    @name.deleter
+    def name(self):        
+        del self.name
 
-sentence = "Start a sentence and then bring it to an end"
-
-pattern = re.compile(r"[A-Z][a-z]+")
-matches = pattern.finditer(sentence)
-
-for match in matches:
-    print(match)
+s1 = Student("Pam", "None")
+print(s1.name)
+del s1.name
+print(s1.name)
